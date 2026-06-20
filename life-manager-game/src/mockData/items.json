@@ -1,0 +1,4 @@
+[
+  { "id": "itm_001", "name": "Nano Shield Prototype", "level": 2, "mana_cost": 20 },
+  { "id": "itm_002", "name": "Overclocked Quantum Chipset", "level": 1, "mana_cost": 10 }
+]

@@ -1,0 +1,5 @@
+[
+  { "id": "log_01", "category": "Food & Coffee", "resource_type": "GOLD", "amount": 50, "timestamp": "2026-06-16T14:20:00Z" },
+  { "id": "log_02", "category": "Gaming Steam Sale", "resource_type": "GOLD", "amount": 120, "timestamp": "2026-06-17T09:00:00Z" },
+  { "id": "log_03", "category": "Doom Scrolling TikTok", "resource_type": "TIME", "amount": 0.015, "timestamp": "2026-06-17T22:30:00Z" }
+]

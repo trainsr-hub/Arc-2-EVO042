@@ -1,0 +1,7 @@
+/* src/components/tabs/Stt01/styles/index.css */
+
+/* Tự động nạp và phân phối các tệp CSS thành phần thông qua cơ chế gom cụm gốc */
+@import "./Stt01Base.css";
+@import "./FlamesFX.css";
+@import "./TidalWavesFX.css";
+@import "./VoidFX.css";

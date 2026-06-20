@@ -1,0 +1,7 @@
+{
+  "is_dev_mode": false,
+  "dev_username": "Developer_Mode_Active",
+  "comment": "Set is_dev_mode to false to force MongoDB Connection Gate login screen.",
+  "hello": "mongodb+srv://kha70929_db_user:HJ23bYNBlFbaz4Ae@rabbitankcluster.zbptpmd.mongodb.net/?appName=RabbiTankCluster",
+  "jello": "mongodb://kha70929_db_user:HJ23bYNBlFbaz4Ae@ac-kpjeaf9-shard-00-00.zbptpmd.mongodb.net:27017,ac-kpjeaf9-shard-00-01.zbptpmd.mongodb.net:27017,ac-kpjeaf9-shard-00-02.zbptpmd.mongodb.net:27017/?ssl=true&replicaSet=atlas-y282vs-shard-0&authSource=admin&appName=RabbiTankCluster"
+}

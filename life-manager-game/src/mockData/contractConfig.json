@@ -1,0 +1,16 @@
+{
+  "base_pool_size": 50,
+  "resources": [
+    { "id": "energy", "name": "Energy Core Power", "type": "ELEMENT", "space_cost": 5 , "perserving": 5},
+    { "id": "energy_flames", "name": "Everlasting Flames Energy", "type": "ELEMENT", "space_cost": 10, "perserving": 5 },
+    { "id": "energy_tidal", "name": "Tidal Waves Energy", "type": "ELEMENT", "space_cost": 10, "perserving": 5 },
+    { "id": "energy_stars", "name": "River of Stars Energy", "type": "ELEMENT", "space_cost": 10, "perserving": 5  },
+    { "id": "energy_void", "name": "Void Energy", "type": "ELEMENT", "space_cost": 10, "perserving": 5  },
+    { "id": "energy_polarity", "name": "Polarity Energy", "type": "ELEMENT", "space_cost": 10, "perserving": 5  }
+  ],
+  "gacha_packs": [
+    { "id": "pack_standard", "name": "Standard Gacha Pack", "type": "PACK", "space_cost": 190, "perserving": 1  },
+    { "id": "pack_advanced", "name": "Advanced Gacha Pack", "type": "PACK", "space_cost": 210, "perserving": 1  },
+    { "id": "pack_vip", "name": "VIP Gacha Core Pack", "type": "PACK", "space_cost": 800, "perserving": 1  }
+  ]
+}

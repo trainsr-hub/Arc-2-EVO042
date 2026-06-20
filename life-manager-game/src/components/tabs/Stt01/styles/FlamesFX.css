@@ -1,0 +1,97 @@
+/* src/components/tabs/Stt01/styles/FlamesFX.css */
+
+/* Cấu hình trạng thái màu sắc tĩnh cô lập cho lớp Hệ Hoả */
+.cyber-contract-card.everlasting-flames {
+  border: 1px solid #ff6b00;
+  color: #ff8c3a;
+  background-color: rgba(25, 10, 0, 0.8);
+  --badge-color: #ff6b00;
+}
+
+/* Lớp shroud đóng vai trò làm quầng nhiệt mờ ở đáy */
+.cyber-contract-card.everlasting-flames .fx-background-shroud {
+  position: absolute; bottom: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(0deg, rgba(255, 60, 0, 0.08) 0%, transparent 60%);
+  z-index: 1; pointer-events: none;
+}
+
+/* Ẩn các lớp layer thuộc về đặc quyền hiển thị của các hệ nguyên tố khác */
+.cyber-contract-card.everlasting-flames .fx-wave-layer,
+.cyber-contract-card.everlasting-flames .fx-center-core,
+.cyber-contract-card.everlasting-flames .wave-tsunami-surge {
+  display: none !important;
+}
+
+/* Biến đổi các hạt giống rỗng vạn năng thành đốm lửa bập bùng cháy */
+.cyber-contract-card.everlasting-flames .fx-seed {
+  position: absolute;
+  bottom: -10px;
+  background: radial-gradient(circle, #ffaa00 20%, rgba(255, 60, 0, 0.8) 70%, transparent 100%);
+  border-radius: 50%;
+  mix-blend-mode: screen;
+  z-index: 2;
+  pointer-events: none;
+  animation: emberRiseMotion 2.2s linear infinite;
+}
+
+/* Phân rã tham số tọa độ biên ngang tĩnh thủ công bằng CSS cho từng hạt giống hạt */
+.cyber-contract-card.everlasting-flames .fx-seed:nth-child(1) { left: 8%; width: 5px; height: 5px; animation-delay: 0.1s; --rnd-x-offset: -12px; }
+.cyber-contract-card.everlasting-flames .fx-seed:nth-child(2) { left: 22%; width: 8px; height: 8px; animation-delay: 0.7s; --rnd-x-offset: 18px; }
+.cyber-contract-card.everlasting-flames .fx-seed:nth-child(3) { left: 38%; width: 4px; height: 4px; animation-delay: 1.3s; --rnd-x-offset: -6px; }
+.cyber-contract-card.everlasting-flames .fx-seed:nth-child(4) { left: 51%; width: 7px; height: 7px; animation-delay: 0.4s; --rnd-x-offset: 15px; }
+.cyber-contract-card.everlasting-flames .fx-seed:nth-child(5) { left: 66%; width: 9px; height: 9px; animation-delay: 1.8s; --rnd-x-offset: -20px; }
+.cyber-contract-card.everlasting-flames .fx-seed:nth-child(6) { left: 81%; width: 5px; height: 5px; animation-delay: 1.0s; --rnd-x-offset: 12px; }
+.cyber-contract-card.everlasting-flames .fx-seed:nth-child(7) { left: 44%; width: 6px; height: 6px; animation-delay: 0.2s; --rnd-x-offset: 16px; }
+.cyber-contract-card.everlasting-flames .fx-seed:nth-child(8) { left: 73%; width: 8px; height: 8px; animation-delay: 1.5s; --rnd-x-offset: -14px; }
+
+/* Kịch bản thanh quét đường lửa tịnh tiến thiêu rụi */
+.cyber-contract-card.everlasting-flames .flames-burn-overlay {
+  position: absolute; left: 0; width: 100%; height: 16px;
+  background: linear-gradient(0deg, transparent, #ff2200, #ffffff, #ff6b00, transparent);
+  box-shadow: 0 0 25px 8px #ff6b00, 0 0 12px 3px #ffffff;
+  mix-blend-mode: screen; z-index: 5; pointer-events: none; opacity: 0; top: 100%;
+}
+
+/* KÍCH HOẠT CHU KỲ HOẠT HỌA THEO YÊU CẦU: Quét tới đâu cháy rách biến mất tiêu rụi tới đó */
+.cyber-contract-card.everlasting-flames.state-enter { animation: flamesSpawn 0.45s ease-out forwards; }
+.cyber-contract-card.everlasting-flames.state-idle { animation: flamesBreathing 2s ease-in-out infinite alternate; }
+
+.cyber-contract-card.everlasting-flames.state-claiming {
+  animation: flamesBurnUpClaim 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+.cyber-contract-card.everlasting-flames.state-claiming .flames-burn-overlay {
+  animation: flamesLineSweepUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+.cyber-contract-card.everlasting-flames.state-dropping { animation: flamesExtinguishDrop 0.45s ease-in forwards; }
+
+/* Hệ thống Keyframes hoạt họa Hệ Hỏa */
+@keyframes emberRiseMotion {
+  0% { transform: translateY(0) translateX(0) scale(1); opacity: 0; }
+  15% { opacity: 0.9; }
+  50% { transform: translateY(-60px) translateX(var(--rnd-x-offset)) scale(0.7); }
+  100% { transform: translateY(-150px) translateX(calc(var(--rnd-x-offset) * 2)) scale(0.1); opacity: 0; }
+}
+@keyframes flamesSpawn {
+  0% { opacity: 0; transform: translateY(40px) scaleY(1.2); filter: brightness(2); }
+  100% { opacity: 1; transform: translateY(0) scaleY(1); filter: brightness(1); }
+}
+@keyframes flamesBreathing {
+  0% { box-shadow: 0 0 10px rgba(255, 107, 0, 0.15), inset 0 0 4px rgba(255, 107, 0, 0.1); }
+  100% { box-shadow: 0 0 24px rgba(255, 60, 0, 0.4), inset 0 0 12px rgba(255, 60, 0, 0.2); }
+}
+@keyframes flamesLineSweepUp {
+  0% { top: 100%; opacity: 1; }
+  10% { opacity: 1; }
+  95% { opacity: 1; }
+  100% { top: -5%; opacity: 0; }
+}
+@keyframes flamesBurnUpClaim {
+  0% { clip-path: inset(0% 0% 0% 0%); filter: brightness(1); }
+  10% { filter: brightness(1.1); }
+  100% { clip-path: inset(0% 0% 100% 0%); filter: brightness(1.6); } /* Quét nén khối biến mất tịnh tiến cực sạch từ đáy lên */
+}
+@keyframes flamesExtinguishDrop {
+  0% { filter: grayscale(0); }
+  20% { filter: grayscale(1) brightness(0.2); border-color: #222 !important; box-shadow: none; }
+  100% { transform: translateY(200px); opacity: 0; }
+}

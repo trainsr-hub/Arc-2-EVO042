@@ -1,0 +1,63 @@
+/* src/components/tabs/Stt01/styles/TidalWavesFX.css */
+
+.cyber-contract-card.unfrozen-tides {
+  border: 1px solid #00bfff;
+  color: #33ccff;
+  background-color: rgba(0, 15, 25, 0.8);
+  --badge-color: #00bfff;
+}
+
+/* Khóa ẩn các lớp FX thuộc về đặc quyền của lửa hoặc vũ trụ */
+.cyber-contract-card.unfrozen-tides .fx-background-shroud,
+.cyber-contract-card.unfrozen-tides .fx-center-core,
+.cyber-contract-card.unfrozen-tides .fx-seed,
+.cyber-contract-card.unfrozen-tides .flames-burn-overlay {
+  display: none !important;
+}
+
+/* Ép các lớp layer vạn năng biến hình thành gợn sóng lỏng xô chéo parallax */
+.cyber-contract-card.unfrozen-tides .fx-wave-layer {
+  position: absolute;
+  bottom: -60px; left: -50%; width: 200%; height: 80px;
+  background: radial-gradient(ellipse at top, rgba(0, 191, 255, 0.08) 0%, rgba(0, 119, 255, 0.03) 70%, transparent 100%);
+  border-radius: 40% 45% 42% 40%;
+  transform-origin: 50% 50%;
+  z-index: 1; pointer-events: none;
+}
+.cyber-contract-card.unfrozen-tides .fx-wave-layer.wl-1 { animation: waveRollingPhysics 9s linear infinite; bottom: -55px; }
+.cyber-contract-card.unfrozen-tides .fx-wave-layer.wl-2 { animation: waveRollingPhysics 6s linear infinite reverse; opacity: 0.6; height: 90px; bottom: -50px; }
+.cyber-contract-card.unfrozen-tides .fx-wave-layer.wl-3 { animation: waveRollingPhysics 4s linear infinite; opacity: 0.3; height: 75px; bottom: -65px; }
+
+/* Bức tường sóng thần dội quét dọc dọc của hệ Thủy */
+.cyber-contract-card.unfrozen-tides .wave-tsunami-surge {
+  position: absolute; top: -100%; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 191, 255, 0.4) 85%, #ffffff 100%);
+  box-shadow: 0 15px 30px rgba(0, 191, 255, 0.5);
+  z-index: 3; pointer-events: none; opacity: 0;
+}
+
+/* Vòng đời hoạt họa hệ Thủy */
+.cyber-contract-card.unfrozen-tides.state-enter { animation: tidalSurgeSpawn 0.6s cubic-bezier(0.1, 0.8, 0.3, 1) forwards; }
+.cyber-contract-card.unfrozen-tides.state-idle { animation: tidalEbbPulse 4s ease-in-out infinite alternate; }
+.cyber-contract-card.unfrozen-tides.state-claiming { animation: tidalWashSlateClaim 0.7s cubic-bezier(0.25, 1, 0.5, 1) forwards; }
+.cyber-contract-card.unfrozen-tides.state-claiming .wave-tsunami-surge { animation: tsunamiSurgeSweep 0.7s cubic-bezier(0.25, 1, 0.5, 1) forwards; }
+.cyber-contract-card.unfrozen-tides.state-dropping { animation: tidalAbyssDrop 0.45s ease-in forwards; }
+
+@keyframes waveRollingPhysics { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+@keyframes tidalSurgeSpawn {
+  0% { opacity: 0; transform: scaleX(0.5) translateY(20px); filter: blur(4px); }
+  100% { opacity: 1; transform: scaleX(1) translateY(0); filter: blur(0); }
+}
+@keyframes tidalEbbPulse {
+  0% { box-shadow: 0 4px 12px rgba(0, 191, 255, 0.15); }
+  100% { box-shadow: 0 8px 28px rgba(0, 191, 255, 0.35); transform: translateY(-2px); }
+}
+@keyframes tsunamiSurgeSweep {
+  0% { top: -100%; opacity: 0; }
+  30% { opacity: 1; }
+  100% { top: 100%; opacity: 0.1; }
+}
+@keyframes tidalWashSlateClaim {
+  100% { transform: scaleX(1.4) scaleY(0) translateY(30px); filter: blur(10px) brightness(4); opacity: 0; }
+}
+@keyframes tidalAbyssDrop { 100% { transform: translateY(120px) rotate(8deg) scale(0.8); filter: brightness(0.1); opacity: 0; } }

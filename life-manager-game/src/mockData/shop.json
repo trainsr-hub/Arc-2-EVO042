@@ -1,0 +1,12 @@
+{
+  "time_in_year": 1.4152,
+  "energy": 150,
+  "money_vnd": 2500000,
+  "legacy_points": 25,
+  "consumables_inventory": [],
+  "shop_items": [
+    { "id": "pack_alpha", "name": "Gacha Core Pack: Chronos (x10 Rolls)", "tab": "GACHA", "cost_energy": 100 },
+    { "id": "pack_vip", "name": "Gacha Core Pack: Overlord VIP (x10 Rolls)", "tab": "GACHA", "cost_energy": 350 },
+    { "id": "csm_allowance", "name": "Consumable: Liquidity Refill monthly", "tab": "CONSUMABLES", "cost_energy": 50 }
+  ]
+}

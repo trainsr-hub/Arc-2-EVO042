@@ -1,0 +1,68 @@
+/* src/components/tabs/Stt01/styles/Stt01Base.css */
+
+/* --- HIỆU ỨNG TRẠM TRIỆU HỒI CHUNG --- */
+.matrix-summon-btn {
+  padding: 10px 20px;
+  background: transparent;
+  color: #06b6d4;
+  border: 1px solid #06b6d4;
+  border-radius: 6px;
+  font-weight: bold;
+  font-family: monospace;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 8px rgba(6, 182, 212, 0.2);
+}
+.matrix-summon-btn:hover {
+  background: rgba(6, 182, 212, 0.1);
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.6);
+  text-shadow: 0 0 5px #06b6d4;
+}
+.matrix-summon-btn:active {
+  transform: scale(0.94);
+  background: #06b6d4;
+  color: #02040a;
+  box-shadow: 0 0 35px #06b6d4;
+}
+
+/* --- KHUNG ĐỊNH HÌNH THẺ BÀI SƠ CẤP CHUNG --- */
+.cyber-contract-card {
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+              box-shadow 0.3s ease, 
+              border-color 0.3s ease;
+}
+
+/* Lớp phủ Scanlines hoài cổ bao bọc bảo vệ trên cùng */
+.cyber-contract-card::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+  z-index: 6;
+  background-size: 100% 4px;
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+/* Đảm bảo chữ nổi đứng trên các hiệu ứng ngầm nền */
+.card-interactive-content {
+  position: relative;
+  z-index: 4;
+  transition: opacity 0.2s ease, transform 0.3s ease;
+}
+
+/* Fallback phụ trợ cho các hệ nguyên tố tĩnh chưa lập trình hiệu ứng động */
+.cyber-contract-card.river-of-stars { border: 1px solid #bd00ff; color: #d966ff; background: rgba(18, 0, 25, 0.75); }
+.cyber-contract-card.river-of-stars.state-idle { box-shadow: 0 0 12px rgba(189, 0, 255, 0.2); }
+
+.cyber-contract-card.polarity { border: 1px solid #1e90ff; color: #63b8ff; background: rgba(5, 12, 28, 0.8); }
+.cyber-contract-card.polarity.state-idle { box-shadow: 0 0 12px rgba(30, 144, 255, 0.2); }

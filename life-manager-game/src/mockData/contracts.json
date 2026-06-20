@@ -1,0 +1,44 @@
+[
+  {
+    "id": "con_001",
+    "theme": "Đọc sách chuyên ngành",
+    "element_type": "Everlasting Flames",
+    "status": "AVAILABLE",
+    "weight": 5,
+    "rank_contents": {
+      "I": "Đọc tập trung và ghi chép nhanh tối thiểu 15 trang sách chuyên ngành.",
+      "II": "Đọc quyết liệt và phân tích sâu tối thiểu 30 trang sách.",
+      "III": "Hoàn thành 60 trang sách chuyên ngành và trích xuất sơ đồ tư duy Mindmap.",
+      "IV": "Nghiền ngẫm 120 trang tài liệu kỹ thuật và viết bài viết tóm tắt ngắn.",
+      "V": "Kỷ lục Flames: Quét sạch 240 trang sách chuyên ngành, biên soạn slide tổng hợp kiến thức."
+    }
+  },
+  {
+    "id": "con_002",
+    "theme": "Đọc sách chuyên ngành",
+    "element_type": "Unfrozen Tides",
+    "status": "AVAILABLE",
+    "weight": 5,
+    "rank_contents": {
+      "I": "Thả lỏng tư duy, duy trì nhịp đọc sách liên tục 20 phút không chạm điện thoại.",
+      "II": " Check-in đọc sách sâu trong 45 phút, ngắt toàn bộ nguồn gây xao nhãng.",
+      "III": "Dòng chảy Tidal: Duy trì 90 phút đọc sách, ghi chép lại những đoạn tâm đắc.",
+      "IV": "Đọc sách chánh niệm liên tục 3 tiếng (180 phút), chia làm 3 nhịp thở sâu.",
+      "V": "Đại dương tri thức: Giữ trạng thái Hyper-focus đọc liên tục 6 tiếng trong ngày."
+    }
+  },
+  {
+    "id": "con_003",
+    "theme": "Refactor Code nguồn",
+    "element_type": "Void",
+    "status": "AVAILABLE",
+    "weight": 4,
+    "rank_contents": {
+      "I": "Hòa tan Code rác: Tìm và xóa bỏ ít nhất 3 hàm/biến dư thừa không sử dụng.",
+      "II": "Tối ưu hóa cấu trúc tệp tin, dọn dẹp phân rã 1 file cồng kềnh thành các module.",
+      "III": "Chuyển hóa Void: Refactor toàn bộ logic xử lý bất đồng bộ sang cấu trúc Async/Await sạch sẽ.",
+      "IV": "Viết lại kiến trúc lõi của module cũ, nâng cao tính đóng gói và giảm tối đa dependency chéo.",
+      "V": "Hố đen cô đặc: Tái cấu trúc toàn bộ dự án, đưa hiệu năng xử lý đạt chuẩn tối ưu."
+    }
+  }
+]
